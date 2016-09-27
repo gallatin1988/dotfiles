@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "help+" "help+.el" (22504 38977 60798 166000))
-;;; Generated autoloads from help+.el
+;;;### (autoloads nil "help+" "../../../../.emacs.d/elpa/help+-20151231.1328/help+.el"
+;;;;;;  "a978a3c680f46cf0cc96b0ff9eb60549")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/help+-20151231.1328/help+.el
 
 (autoload 'describe-key "help+" "\
 Describe the command that a keyboard/menu/mouse sequence invokes.
@@ -80,6 +81,12 @@ Give help on the mode line.
 Pop to buffer *Help* or back to the buffer that sent you to *Help*.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/help+-20151231.1328/help+-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/help+-20151231.1328/help+.el")
+;;;;;;  (22505 19843 276478 534000))
 
 ;;;***
 

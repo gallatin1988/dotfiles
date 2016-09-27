@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "discover-my-major" "discover-my-major.el"
-;;;;;;  (22504 38805 20803 59000))
-;;; Generated autoloads from discover-my-major.el
+;;;### (autoloads nil "discover-my-major" "../../../../.emacs.d/elpa/discover-my-major-20160108.1041/discover-my-major.el"
+;;;;;;  "f987d2aa44efb599e7b82d23a3ba9ab4")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/discover-my-major-20160108.1041/discover-my-major.el
 
 (autoload 'discover-my-major "discover-my-major" "\
 Create a makey popup listing all major-mode keys with their description.
@@ -17,6 +17,12 @@ If ARG is non-nil recreate the makey popup function even if it is already define
 Create a makey popup listing all MODE keys with their description.
 
 \(fn MODE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/discover-my-major-20160108.1041/discover-my-major-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/discover-my-major-20160108.1041/discover-my-major.el")
+;;;;;;  (22505 19660 271483 739000))
 
 ;;;***
 

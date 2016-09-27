@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "info+" "info+.el" (22504 38665 4807 41000))
-;;; Generated autoloads from info+.el
+;;;### (autoloads nil "info+" "../../../../.emacs.d/elpa/info+-20160702.1343/info+.el"
+;;;;;;  "7b7a20f3d965976644dd02d12ba23b59")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/info+-20160702.1343/info+.el
 
 (let ((loads (get 'Info-Plus 'custom-loads))) (if (member '"info+" loads) nil (put 'Info-Plus 'custom-loads (cons '"info+" loads))))
 
@@ -244,6 +245,12 @@ If key's command cannot be found by looking in indexes, then
 `Info-search' is used to search for the key sequence in the info text.
 
 \(fn KEY &optional MSGP)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/info+-20160702.1343/info+-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/info+-20160702.1343/info+.el")
+;;;;;;  (22505 19515 726487 849000))
 
 ;;;***
 

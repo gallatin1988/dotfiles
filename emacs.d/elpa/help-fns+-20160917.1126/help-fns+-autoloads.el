@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "help-fns+" "help-fns+.el" (22504 39006 307797
-;;;;;;  334000))
-;;; Generated autoloads from help-fns+.el
+;;;### (autoloads nil "help-fns+" "../../../../.emacs.d/elpa/help-fns+-20160917.1126/help-fns+.el"
+;;;;;;  "9e3f7a5a5a44ed133dc449696f639327")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/help-fns+-20160917.1126/help-fns+.el
 
 (autoload 'describe-command "help-fns+" "\
 Describe an Emacs command (interactive function).
@@ -62,6 +62,12 @@ Non-nil optional arg NO-ERROR-P prints an error message but does not
  raise an error.
 
 \(fn FILENAME &optional INTERNAL-FORM-P NO-ERROR-P)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/help-fns+-20160917.1126/help-fns+-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/help-fns+-20160917.1126/help-fns+.el")
+;;;;;;  (22505 19842 476478 557000))
 
 ;;;***
 

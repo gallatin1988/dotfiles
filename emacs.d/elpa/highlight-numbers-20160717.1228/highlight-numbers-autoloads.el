@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "highlight-numbers" "highlight-numbers.el"
-;;;;;;  (22504 38110 987822 796000))
-;;; Generated autoloads from highlight-numbers.el
+;;;### (autoloads nil "highlight-numbers" "../../../../.emacs.d/elpa/highlight-numbers-20160717.1228/highlight-numbers.el"
+;;;;;;  "25adfd7b6aa228c8b5d20d8402fcf673")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/highlight-numbers-20160717.1228/highlight-numbers.el
 
 (autoload 'highlight-numbers-mode "highlight-numbers" "\
 Minor mode for highlighting numeric literals in source code.
@@ -17,6 +17,12 @@ positive, and disable it otherwise. If called from Lisp, enable
 the mode if ARG is omitted or nil, and toggle it if ARG is `toggle'.
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/highlight-numbers-20160717.1228/highlight-numbers-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/highlight-numbers-20160717.1228/highlight-numbers.el")
+;;;;;;  (22505 18274 167523 158000))
 
 ;;;***
 

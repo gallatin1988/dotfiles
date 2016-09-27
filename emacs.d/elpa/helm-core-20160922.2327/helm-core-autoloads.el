@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "helm" "helm.el" (22504 24125 142220 540000))
-;;; Generated autoloads from helm.el
+;;;### (autoloads nil "helm" "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm.el"
+;;;;;;  "bbf02389ff7a14dab7fb69ff2de116a2")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/helm-core-20160922.2327/helm.el
 
 (autoload 'helm-define-multi-key "helm" "\
 In KEYMAP, define key sequence KEY for function list FUNCTIONS.
@@ -187,8 +188,13 @@ Enable/disable helm debugging from outside of helm session.
 
 ;;;***
 
-;;;### (autoloads nil nil ("helm-core-pkg.el" "helm-lib.el" "helm-multi-match.el"
-;;;;;;  "helm-source.el") (22504 24125 232220 537000))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/helm-core-20160922.2327/helm-core-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm-core-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm-lib.el"
+;;;;;;  "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm-multi-match.el"
+;;;;;;  "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm-source.el"
+;;;;;;  "../../../../.emacs.d/elpa/helm-core-20160922.2327/helm.el")
+;;;;;;  (22504 56478 140300 453000))
 
 ;;;***
 

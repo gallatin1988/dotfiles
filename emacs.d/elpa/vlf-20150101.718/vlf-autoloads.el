@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "vlf" "vlf.el" (22504 36513 374868 231000))
-;;; Generated autoloads from vlf.el
+;;;### (autoloads nil "vlf" "../../../../.emacs.d/elpa/vlf-20150101.718/vlf.el"
+;;;;;;  "965d2b64bf4c51aae832e0281c40b6ed")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/vlf-20150101.718/vlf.el
 
 (autoload 'vlf "vlf" "\
 View Large FILE in batches.  When MINIMAL load just a few bytes.
@@ -16,9 +17,9 @@ Return newly created buffer.
 
 ;;;***
 
-;;;### (autoloads nil "vlf-ediff" "vlf-ediff.el" (22504 36513 488868
-;;;;;;  228000))
-;;; Generated autoloads from vlf-ediff.el
+;;;### (autoloads nil "vlf-ediff" "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-ediff.el"
+;;;;;;  "54a9f690b19dcae18ce7a354156fbe73")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/vlf-20150101.718/vlf-ediff.el
 
 (autoload 'vlf-ediff-files "vlf-ediff" "\
 Run batch by batch ediff over FILE-A and FILE-B.
@@ -30,9 +31,9 @@ respectively of difference list, runs ediff over the adjacent chunks.
 
 ;;;***
 
-;;;### (autoloads nil "vlf-occur" "vlf-occur.el" (22504 36513 578868
-;;;;;;  225000))
-;;; Generated autoloads from vlf-occur.el
+;;;### (autoloads nil "vlf-occur" "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-occur.el"
+;;;;;;  "719b3973ea2223fbe12dcf92e711ec75")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/vlf-20150101.718/vlf-occur.el
 
 (autoload 'vlf-occur-load "vlf-occur" "\
 Load serialized `vlf-occur' results from current buffer.
@@ -41,9 +42,17 @@ Load serialized `vlf-occur' results from current buffer.
 
 ;;;***
 
-;;;### (autoloads nil nil ("vlf-base.el" "vlf-follow.el" "vlf-pkg.el"
-;;;;;;  "vlf-search.el" "vlf-setup.el" "vlf-tune.el" "vlf-write.el")
-;;;;;;  (22504 36513 802868 219000))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/vlf-20150101.718/vlf-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-base.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-ediff.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-follow.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-occur.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-pkg.el" "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-search.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-setup.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-tune.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf-write.el"
+;;;;;;  "../../../../.emacs.d/elpa/vlf-20150101.718/vlf.el") (22504
+;;;;;;  63031 393114 85000))
 
 ;;;***
 

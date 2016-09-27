@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "clean-aindent-mode" "clean-aindent-mode.el"
-;;;;;;  (22504 22167 341276 218000))
-;;; Generated autoloads from clean-aindent-mode.el
+;;;### (autoloads nil "clean-aindent-mode" "../../../../.emacs.d/elpa/clean-aindent-mode-20150816.2029/clean-aindent-mode.el"
+;;;;;;  "5590ea4752ac4684e9f571229857b9c9")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/clean-aindent-mode-20150816.2029/clean-aindent-mode.el
 
 (defvar clean-aindent-mode nil "\
 Non-nil if Clean-Aindent mode is enabled.
@@ -37,6 +37,12 @@ to the line above or any other that is with indentation smaller
 than the current.
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/clean-aindent-mode-20150816.2029/clean-aindent-mode-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/clean-aindent-mode-20150816.2029/clean-aindent-mode.el")
+;;;;;;  (22504 54889 936345 620000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "workgroups2" "workgroups2.el" (22504 5148
-;;;;;;  90760 228000))
-;;; Generated autoloads from workgroups2.el
+;;;### (autoloads nil "workgroups2" "../../../../.emacs.d/elpa/workgroups2-20141102.1122/workgroups2.el"
+;;;;;;  "71b12865c2ac9032326d25286851eeac")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/workgroups2-20141102.1122/workgroups2.el
 
 (autoload 'workgroups-mode "workgroups2" "\
 Turn `workgroups-mode' on and off.
@@ -23,6 +23,12 @@ including a `wg-help' variable that basically duplicated every
 command's docstring;  But why, when there's `apropos-command'?
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/workgroups2-20141102.1122/workgroups2-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/workgroups2-20141102.1122/workgroups2.el")
+;;;;;;  (22504 53950 26372 350000))
 
 ;;;***
 

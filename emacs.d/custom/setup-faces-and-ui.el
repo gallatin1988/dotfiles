@@ -1,7 +1,6 @@
-(provide 'setup-faces-and-ui)
-
 ;; you won't need any of the bar thingies
 ;; turn it off to save screen estate
+;; Code:
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -25,8 +24,11 @@
 
 ;; change font to Inconsolata for better looking text
 ;; remember to install the font Inconsolata first
-(setq default-frame-alist '((font . "Inconsolata-11")))
+(setq deault-frame-alist '((font . "Inconsolata-Regular-12")))
 ;; set italic font for italic face, since Emacs does not set italic
 ;; face automatically
 (set-face-attribute 'italic nil
                     :family "Inconsolata-Italic")
+
+(provide 'setup-faces-and-ui)
+;;; setup-faces-and-ui.el ends here

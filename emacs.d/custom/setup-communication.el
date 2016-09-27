@@ -1,4 +1,4 @@
-(provide 'setup-communications)
+(provide 'setup-communication)
 
 ;; go-to-address-mode
 (add-hook 'prog-mode-hook 'goto-address-mode)

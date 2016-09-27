@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "color-theme-sanityinc-tomorrow" "color-theme-sanityinc-tomorrow.el"
-;;;;;;  (22504 38469 757812 593000))
-;;; Generated autoloads from color-theme-sanityinc-tomorrow.el
+;;;### (autoloads nil "color-theme-sanityinc-tomorrow" "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/color-theme-sanityinc-tomorrow.el"
+;;;;;;  "71a86e74e083e7e35bb513b09724aee5")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/color-theme-sanityinc-tomorrow.el
 
 (when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
@@ -36,10 +36,15 @@ Apply the tomorrow blue theme.
 
 ;;;***
 
-;;;### (autoloads nil nil ("color-theme-sanityinc-tomorrow-pkg.el"
-;;;;;;  "sanityinc-tomorrow-blue-theme.el" "sanityinc-tomorrow-bright-theme.el"
-;;;;;;  "sanityinc-tomorrow-day-theme.el" "sanityinc-tomorrow-eighties-theme.el"
-;;;;;;  "sanityinc-tomorrow-night-theme.el") (22504 38470 20812 586000))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/color-theme-sanityinc-tomorrow-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/color-theme-sanityinc-tomorrow-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/color-theme-sanityinc-tomorrow.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/sanityinc-tomorrow-blue-theme.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/sanityinc-tomorrow-bright-theme.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/sanityinc-tomorrow-day-theme.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/sanityinc-tomorrow-eighties-theme.el"
+;;;;;;  "../../../../.emacs.d/elpa/color-theme-sanityinc-tomorrow-20160916.1758/sanityinc-tomorrow-night-theme.el")
+;;;;;;  (22505 19091 137499 924000))
 
 ;;;***
 

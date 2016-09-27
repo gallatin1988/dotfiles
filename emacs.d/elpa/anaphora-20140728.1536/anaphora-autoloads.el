@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "anaphora" "anaphora.el" (22504 5147 389760
-;;;;;;  248000))
-;;; Generated autoloads from anaphora.el
+;;;### (autoloads nil "anaphora" "../../../../.emacs.d/elpa/anaphora-20140728.1536/anaphora.el"
+;;;;;;  "c8686d87a4e315ffaa7821d0b2416e68")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/anaphora-20140728.1536/anaphora.el
 
 (let ((loads (get 'anaphora 'custom-loads))) (if (member '"anaphora" loads) nil (put 'anaphora 'custom-loads (cons '"anaphora" loads))))
 
@@ -241,6 +241,12 @@ for the pre-existing `aset', and because `anaphoric-setq' is not
 likely to find frequent use.
 
 \(fn &rest ARGS)" nil t)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/anaphora-20140728.1536/anaphora-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/anaphora-20140728.1536/anaphora.el")
+;;;;;;  (22504 53949 216372 373000))
 
 ;;;***
 

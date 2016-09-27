@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "golden-ratio" "golden-ratio.el" (22504 37931
-;;;;;;  557827 899000))
-;;; Generated autoloads from golden-ratio.el
+;;;### (autoloads nil "golden-ratio" "../../../../.emacs.d/elpa/golden-ratio-20150819.420/golden-ratio.el"
+;;;;;;  "02de62dac8f4fbbbb20997955f39b063")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/golden-ratio-20150819.420/golden-ratio.el
 
 (autoload 'golden-ratio "golden-ratio" "\
 Resizes current window to the golden-ratio's size specs.
@@ -26,6 +26,12 @@ or call the function `golden-ratio-mode'.")
 Enable automatic window resizing with golden ratio.
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/golden-ratio-20150819.420/golden-ratio-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/golden-ratio-20150819.420/golden-ratio.el")
+;;;;;;  (22505 17167 473554 631000))
 
 ;;;***
 

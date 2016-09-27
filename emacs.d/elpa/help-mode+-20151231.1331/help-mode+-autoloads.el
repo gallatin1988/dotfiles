@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "help-mode+" "help-mode+.el" (22504 39005 509797
-;;;;;;  357000))
-;;; Generated autoloads from help-mode+.el
+;;;### (autoloads nil "help-mode+" "../../../../.emacs.d/elpa/help-mode+-20151231.1331/help-mode+.el"
+;;;;;;  "672a7c69a94771a14c9b564b9be7a78f")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/help-mode+-20151231.1331/help-mode+.el
 
 (when (< emacs-major-version 24) (defun help-mode nil "Major mode for viewing help text and navigating references in it.\nEntry to this mode runs the normal hook `help-mode-hook'.\nCommands:\n\\{help-mode-map}" (interactive) (kill-all-local-variables) (use-local-map help-mode-map) (setq mode-name "Help" major-mode 'help-mode) (view-mode) (make-local-variable 'view-no-disable-on-exit) (setq view-no-disable-on-exit t view-exit-action (lambda (buffer) (or (window-minibuffer-p (selected-window)) (when (eq (window-buffer) (get-buffer "*Help*")) (if (one-window-p t) (delete-frame) (delete-window)))))) (run-mode-hooks 'help-mode-hook)))
 
@@ -31,6 +31,12 @@ help buffers.  Variable `help-back-label' specifies the text for
 that.
 
 \(fn &optional BUFFER)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/help-mode+-20151231.1331/help-mode+-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/help-mode+-20151231.1331/help-mode+.el")
+;;;;;;  (22505 19841 698478 579000))
 
 ;;;***
 

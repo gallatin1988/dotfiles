@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rebox2" "rebox2.el" (22503 46890 821436 884000))
-;;; Generated autoloads from rebox2.el
+;;;### (autoloads nil "rebox2" "../../../../.emacs.d/elpa/rebox2-20121113.500/rebox2.el"
+;;;;;;  "58d82e632dc350aa913173e9264a6824")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/rebox2-20121113.500/rebox2.el
 
 (autoload 'rebox-mode "rebox2" "\
 Toggle rebox mode for managing text and comment boxes.
@@ -79,6 +80,12 @@ With universal arg (C-u), use previous style in loop.
 With numeric arg, use explicit style.
 
 \(fn ARG &optional REFILL)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/rebox2-20121113.500/rebox2-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/rebox2-20121113.500/rebox2.el")
+;;;;;;  (22504 62682 255124 14000))
 
 ;;;***
 

@@ -1,5 +1,4 @@
 (provide 'setup-programming)
-
 ;; GROUP: Programming -> Languages -> C
 
 ;; Available C style:
