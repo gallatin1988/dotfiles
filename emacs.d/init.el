@@ -15,12 +15,20 @@
  ;; If there is more than one, they won't work right.
  )
 
-;;(setq inhibit-startup-message t)
-
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 
 (defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'list-buffers 'ibuffer) ; always use ibuffer
@@ -58,9 +66,9 @@
 ;;                                    ;;
 ;; GROUP: Convenience -> Workgroups   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'workgroups2)
-;; Change some settings
-(workgroups-mode 1)
+(use-package workgroups2
+  :config
+  (workgroups-mode 1))
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; duplicate-thing ;;
@@ -71,11 +79,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package: smartparens ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'smartparens-config)
-(setq sp-base-key-bindings 'paredit)
-(setq sp-autoskip-closing-pair 'always)
-(setq sp-hybrid-kill-entire-symbol nil)
-(sp-use-paredit-bindings)
+(use-package  smartparens
+  :init
+  (setq sp-base-key-bindings 'paredit)
+  (setq sp-autoskip-closing-pair 'always)
+  (setq sp-hybrid-kill-entire-symbol nil)
+  :config
+  (sp-use-paredit-bindings))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package: company              ;;
@@ -120,8 +130,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package projectile
   :init
-  (projectile-global-mode)
-  (setq projectile-enable-caching t))
+  (setq projectile-enable-caching t)
+  :config
+  (projectile-global-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE: dired+                     ;;
@@ -152,9 +163,10 @@
 ;;                     ;;
 ;; GROUP: Files -> Vlf ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'vlf)
-(setq vlf-application 'dont-ask) ;; automatically use vlf on large file,
-                                 ;; when the file exceed large-file-warning-threshold
+(use-package vlf
+  :init
+  (setq vlf-application 'dont-ask)) ;; automatically use vlf on large file,
+                                    ;; when the file exceed large-file-warning-threshold
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE: diff-hl                             ;;

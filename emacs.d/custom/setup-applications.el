@@ -1,15 +1,14 @@
-(provide 'setup-applications)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GROUP: Applications-> Eshell       ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'eshell)
+(use-package eshell)
 (require 'em-alias)
-(require 'cl)
+(use-package cl)
 
 ;; Advise find-file-other-window to accept more than one file
 (defadvice find-file-other-window (around find-files activate)
-  "Also find all files within a list of files. This even works recursively."
+  "Also find all files within a list of files.  This even works recursively."
   (if (listp filename)
       (loop for f in filename do (find-file-other-window f wildcards))
     ad-do-it))
@@ -32,3 +31,6 @@
 ;; change listing switches based on OS
 (when (not (eq system-type 'windows-nt))
   (eshell/alias "ls" "ls --color -h --group-directories-first $*"))
+
+(provide 'setup-applications)
+;;; setup-applications.el ends here
