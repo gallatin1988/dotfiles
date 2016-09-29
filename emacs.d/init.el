@@ -30,7 +30,7 @@
 (setq use-package-always-ensure t)
 
 
-(defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
+;;(defalias 'yes-or-no-p 'y-or-n-p) ; y or n is enough
 (defalias 'list-buffers 'ibuffer) ; always use ibuffer
 
                                         ; elisp
@@ -45,12 +45,19 @@
 (add-to-list 'load-path "~/.emacs.d/custom/")
 
 ;; load your modules
+(require 'setup-general)
+(if (version< emacs-version "24.4")
+    (require 'setup-ivy-counsel)
+  (require 'setup-helm)
+  (require 'setup-helm-gtags))
+;; (require 'setup-ggtags)
+(require 'setup-cedet)
+(require 'setup-editing)
 (require 'setup-applications)
 (require 'setup-communication)
 (require 'setup-convenience)
 (require 'setup-data)
 (require 'setup-development)
-(require 'setup-editing)
 (require 'setup-environment)
 (require 'setup-external)
 (require 'setup-faces-and-ui)
@@ -59,7 +66,17 @@
 (require 'setup-programming)
 (require 'setup-text)
 (require 'setup-local)
-(require 'setup-helm)
+
+
+
+
+;; function-args
+;; (require 'function-args)
+;; (fa-config-default)
+;; (define-key c-mode-map  [(tab)] 'company-complete)
+;; (define-key c++-mode-map  [(tab)] 'company-complete)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE: workgroups2               ;;
@@ -92,7 +109,7 @@
 ;;                               ;;
 ;; GROUP: Convenience -> Company ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-hook 'after-init-hook 'global-company-mode)
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package: expand-region                       ;;
@@ -128,11 +145,11 @@
 ;;                                  ;;
 ;; GROUP: Convenience -> Projectile ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(use-package projectile
-  :init
-  (setq projectile-enable-caching t)
-  :config
-  (projectile-global-mode))
+;;(use-package projectile
+;;  :init
+;;  (setq projectile-enable-caching t)
+;;  :config
+;;  (projectile-global-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE: dired+                     ;;
