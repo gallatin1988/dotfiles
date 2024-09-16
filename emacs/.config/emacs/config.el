@@ -49,82 +49,94 @@
 ;;(use-package general :ensure (:wait t) :demand t)
 
 ;; Expands to: (elpaca evil (use-package evil :demand t))
-(use-package evil :ensure t :demand t
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-vsplit-window-right t)
-  (setq evil-split-window-below t)
-  (evil-mode))
-(use-package evil-collection :ensure t :demand t
-  :after evil
-  :config
-  (setq evil-collection-mode-list '(dashboard dired ibuffer))
-  (evil-collection-init))
-  (use-package evil-tutor :ensure t :demand t)
+(use-package evil
+:ensure t
+:init
+    (setq evil-want-integration t)
+    (setq evil-want-keybinding nil)
+    (setq evil-vsplit-window-right t)
+    (setq evil-split-window-below t)
+    (evil-mode))
+(use-package evil-collection
+:ensure t
+:after evil
+:config
+    (setq evil-collection-mode-list '(dashboard dired ibuffer))
+    (evil-collection-init))
+(use-package evil-tutor
+:ensure t)
 
 ;;Turns off elpaca-use-package-mode current declaration
 ;;Note this will cause evaluate the declaration immediately. It is not deferred.
 ;;Useful for configuring built-in emacs features.
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
-(use-package general :ensure t :demand t
-  :config
-  (general-evil-setup)
-  ;; set up 'SPC' as global leader key
-  (general-create-definer svs/leader-keys
-     :states '(normal insert visual emacs)
-     :keymaps 'override
-     :prefix "SPC"
-     :global-prefix "M-SPC")
+(use-package general
+:ensure t
+:config
+    (general-evil-setup)
+    ;; set up 'SPC' as global leader key
+    (general-create-definer svs/leader-keys
+       :states '(normal insert visual emacs)
+       :keymaps 'override
+       :prefix "SPC"
+       :global-prefix "M-SPC")
 
-  (svs/leader-keys
-     "." '(find-file :wk "Find file")
-     "fc" '((lambda () (interactive) (find-file "~/.config/emacs/config.org")) :wk "Edit emacs config")
-     "TAB TAB" '(comment-line :wk "Comment lines"))
+    (svs/leader-keys
+       "." '(find-file :wk "Find file")
+       "fc" '((lambda () (interactive) (find-file "~/.config/emacs/config.org")) :wk "Edit emacs config")
+       "TAB TAB" '(comment-line :wk "Comment lines"))
 
-  (svs/leader-keys
-     "b" '(:ignore t :wk "Buffer")
-     "bb" '(switch-to-buffer :wk "Switch buffer")
-     "bi" '(ibuffer :wk "ibuffer")
-     "bk" '(kill-this-buffer :wk "Kill this buffer")
-     "bn" '(next-buffer :wk "Next buffer")
-     "bp" '(previous-buffer :wk "Previous buffer")
-     "br" '(revert-buffer :wk "Reload buffer"))
+    (svs/leader-keys
+       "b" '(:ignore t :wk "Buffer")
+       "bb" '(switch-to-buffer :wk "Switch buffer")
+       "bi" '(ibuffer :wk "ibuffer")
+       "bk" '(kill-this-buffer :wk "Kill this buffer")
+       "bn" '(next-buffer :wk "Next buffer")
+       "bp" '(previous-buffer :wk "Previous buffer")
+       "br" '(revert-buffer :wk "Reload buffer"))
 
-  (svs/leader-keys
-     "e" '(:ignore t :wk "Evaluate")
-     "eb" '(eval-buffer :wk "Evaluate elisp in buffer")
-     "ed" '(eval-defun :wk "Evaluate defun containing or after point")
-     "ee" '(elav-expression :wk "Evaluate an elisp expression")
-     "el" '(eval-last-sexp :wk "Evaluate elisp expression before point")
-     "er" '(eval-region :wk "Evaluate elisp in region"))
+    (svs/leader-keys
+       "e" '(:ignore t :wk "Evaluate")
+       "eb" '(eval-buffer :wk "Evaluate elisp in buffer")
+       "ed" '(eval-defun :wk "Evaluate defun containing or after point")
+       "ee" '(elav-expression :wk "Evaluate an elisp expression")
+       "el" '(eval-last-sexp :wk "Evaluate elisp expression before point")
+       "er" '(eval-region :wk "Evaluate elisp in region"))
 
-  (svs/leader-keys
-     "h" '(:ignore t :wk "Help")
-     "hf" '(describe-function :wk "Describe function")
-     "hv" '(describe-variable :wk "Describe variable")
-     "hrr" '((lambda () (interactive) (load-file "~/.config/emacs/init.el")) :wk "Reload emacs config"))
+    (svs/leader-keys
+       "h" '(:ignore t :wk "Help")
+       "hf" '(describe-function :wk "Describe function")
+       "hv" '(describe-variable :wk "Describe variable")
+       "hrr" '((lambda () (interactive) (load-file "~/.config/emacs/init.el")) :wk "Reload emacs config"))
 
-  (svs/leader-keys
-     "t" '(:ignore t :wk "Toggle")
-     "tl" '(display-line-numbers-mode :wk "Toggle line numbers")
-     "tt" '(visual-line mode :wk "Toggle truncated lines"))
+    (svs/leader-keys
+       "t" '(:ignore t :wk "Toggle")
+       "tl" '(display-line-numbers-mode :wk "Toggle line numbers")
+       "tt" '(visual-line mode :wk "Toggle truncated lines"))
 
 )
 
+(use-package all-the-icons
+:ensure t
+:if (display-graphic-p))
+
+(use-package all-the-icons-dired
+:ensure t
+:hook (dired-mode . (lambda () (all-the-icons-dired-mode 1))))
+
 (set-face-attribute 'default nil
-  :font "JetBrains Mono"
-  :height 110
-  :weight 'medium)
+    :font "JetBrains Mono"
+    :height 110
+    :weight 'medium)
 (set-face-attribute 'fixed-pitch nil
-  :font "JetBrains Mono"
-  :height 110
-  :weight 'medium)
+    :font "JetBrains Mono"
+    :height 110
+    :weight 'medium)
 (set-face-attribute 'font-lock-comment-face nil
-  :slant 'italic)
+    :slant 'italic)
 (set-face-attribute 'font-lock-keyword-face nil
-  :slant 'italic)
+    :slant 'italic)
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-11"))
 (setq-default line-spacing 0.12)
 
@@ -140,37 +152,49 @@
 (global-display-line-numbers-mode t)
 (global-visual-line-mode t)
 
-(use-package toc-org :ensure t :demand t
-    :commands toc-org-enable
-    :init (add-hook 'org-mode-hook 'toc-org-enable))
+(use-package toc-org
+:ensure t
+:commands toc-org-enable
+:init (add-hook 'org-mode-hook 'toc-org-enable))
 
 (add-hook 'org-mode-hook 'org-indent-mode)
-(use-package org-bullets :ensure t :demand t)
+(use-package org-bullets
+:ensure t)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (electric-indent-mode -1)
 
 (require 'org-tempo)
 
-(use-package sudo-edit :ensure t :demand t
-   :config
-     (svs/leader-keys
+(use-package catppuccin-theme :ensure t :demand t)
+(load-theme 'catppuccin t)
+
+(use-package rainbow-mode
+:ensure t
+:hook
+((org-mode prog-mode) . rainbow-mode))
+
+(use-package sudo-edit
+:ensure t
+:config
+    (svs/leader-keys
         "fu" '(sudo-edit-find-file :wk "Sudo find file")
         "fU" '(sudo-edit :wk "Sudo edit file")))
 
-(use-package which-key :ensure t :demand t
+(use-package which-key
+:ensure t
 :init
-   (which-key-mode 1)
+    (which-key-mode 1)
 :config
-(setq which-key-side-location 'bottom
-      which-key-sort-order #'which-key-key-order-alpha
-      which-key-sort-uppercase-first nil
-      whick-key-add-column-padding 1
-      which-key-max-display-columns nil
-      which-key-min-display-lines 6
-      which-key-side-window-slot -10
-      which-key-side-window-max-height 0.25
-      which-key-idle-delay 0.8
-      which-key-max-description-length 25
-      which-key-allow-imprecise-window-fit t
-      which-key-separator " -> " ))
+    (setq which-key-side-location 'bottom
+          which-key-sort-order #'which-key-key-order-alpha
+	    which-key-sort-uppercase-first nil
+	    whick-key-add-column-padding 1
+	    which-key-max-display-columns nil
+	    which-key-min-display-lines 6
+	    which-key-side-window-slot -10
+	    which-key-side-window-max-height 0.25
+	    which-key-idle-delay 0.8
+	    which-key-max-description-length 25
+	    which-key-allow-imprecise-window-fit t
+	    which-key-separator " -> " ))
