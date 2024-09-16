@@ -1,0 +1,96 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+se() {
+	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
+	;}
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkd="mkdir -pv" \
+	yt="yt-dlp --embed-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ytt="yt --skip-download --write-thumbnail" \
+	ffmpeg="ffmpeg -hide_banner"
+	
+# Eza
+alias l="eza -l --icons --git -a" \
+      lt="eza --tree --level=2 --long --icons --git" \
+      ltree="eza --tree --level=2  --icons --git"
+      
+# Dirs
+alias ..="cd .." \
+      ...="cd ../.." \
+      ....="cd ../../.." \
+      .....="cd ../../../.." \
+      ......="cd ../../../../.."
+      
+# Git
+alias gc="git commit -m" \
+      gca="git commit -a -m" \
+      gp="git push origin HEAD" \
+      gpu="git pull origin" \
+      gst="git status" \
+      glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit" \
+      gdiff="git diff" \
+      gco="git checkout" \
+      gb='git branch' \
+      gba='git branch -a' \
+      gadd='git add' \
+      ga='git add -p' \
+      gcoall='git checkout -- .' \
+      gr='git remote' \
+      gre='git reset'
+      
+      
+alias la=tree
+alias cat=bat
+
+# Colorize commands when possible.
+alias \
+	ls="ls -alhN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="pacman" \
+	xi="doas xbps-install" \
+	xr="doas xbps-remove -R" \
+	xq="xbps-query" \
+	z="zathura" \
+	logseq="/home/Application/./logseq.appimage" \
+	tor="flatpak run com.github.micahflee.torbrowser-launcher"
+
+alias \
+	lf="lfub" \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+	weath="less -S ${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport"

@@ -1,0 +1,134 @@
+# Created by Octave 8.4.0, Sun Feb 04 23:03:17 2024 CST <svs3@localhost.localdomain>
+# name: local_packages
+# type: cell
+# rows: 1
+# columns: 1
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 13
+# name: name
+# type: sq_string
+# elements: 1
+# length: 14
+pkg-octave-doc
+
+
+# name: version
+# type: sq_string
+# elements: 1
+# length: 5
+0.5.3
+
+
+# name: date
+# type: sq_string
+# elements: 1
+# length: 10
+2024-01-28
+
+
+# name: author
+# type: sq_string
+# elements: 1
+# length: 17
+Andreas Bertsatos
+
+
+# name: maintainer
+# type: sq_string
+# elements: 1
+# length: 42
+Andreas Bertsatos <abertsatos@biol.uoa.gr>
+
+
+# name: title
+# type: sq_string
+# elements: 1
+# length: 28
+Octave Package Documentation
+
+
+# name: description
+# type: sq_string
+# elements: 1
+# length: 366
+This package provides functions for generating HTML pages that  contain the help texts of the functions of an octave package. The package is  designed to work with installed packages and use their INDEX file for creating  the respective functions' HTML pages. The default layout is based on boootstrap  5 and it follows the design of the Octave Packages GitHub page.
+
+
+# name: categories
+# type: sq_string
+# elements: 1
+# length: 7
+package
+
+
+# name: depends
+# type: cell
+# rows: 1
+# columns: 1
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: package
+# type: sq_string
+# elements: 1
+# length: 6
+octave
+
+
+# name: operator
+# type: sq_string
+# elements: 1
+# length: 2
+>=
+
+
+# name: version
+# type: sq_string
+# elements: 1
+# length: 5
+7.2.0
+
+
+
+
+
+
+
+# name: license
+# type: sq_string
+# elements: 1
+# length: 6
+GPLv3+
+
+
+# name: url
+# type: sq_string
+# elements: 1
+# length: 44
+https://github.com/gnu-octave/pkg-octave-doc
+
+
+# name: dir
+# type: sq_string
+# elements: 1
+# length: 68
+/home/svs3/.local/share/octave/api-v58/packages/pkg-octave-doc-0.5.3
+
+
+# name: archprefix
+# type: sq_string
+# elements: 1
+# length: 68
+/home/svs3/.local/share/octave/api-v58/packages/pkg-octave-doc-0.5.3
+
+
+
+
+
+
+

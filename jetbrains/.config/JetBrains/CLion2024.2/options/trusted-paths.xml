@@ -1,0 +1,16 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/dev/cpp/ppp_3ed/chap2/try_this" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/dev/cpp/ppp_3ed/chap2" />
+      </list>
+    </option>
+  </component>
+</application>

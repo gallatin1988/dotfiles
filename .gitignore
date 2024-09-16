@@ -1,0 +1,8 @@
+eln-cache/
+auto-save-list/
+tmux/.config/tmux/plugins/
+**/uduc6eat.default-default/storage
+**/uduc6eat.default-default/sessionstore-backups
+**/weave/logs
+zsh/.config/zsh/.zcompdump
+mozilla/

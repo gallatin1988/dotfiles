@@ -1,0 +1,28 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="Exit">
+      <i c="1" l="1725296648480" />
+    </e>
+    <e n="ShowSettings">
+      <i c="2" l="1725296400034" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1725296208434" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="1" l="1725296606905" />
+    </e>
+    <e n="com.intellij.ide.ReopenProjectAction">
+      <i c="1" l="1725296260230" />
+    </e>
+    <e n="com.intellij.ide.ui.OpenEditorSchemeConfigurableAction">
+      <i c="1" l="1725296608925" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="1" l="1725296262415" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="3" l="1725296644174" />
+    </e>
+  </component>
+</application>

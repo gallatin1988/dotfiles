@@ -1,0 +1,12 @@
+[env]
+TERM = "alacritty"
+
+[shell]
+program = "tmux"
+
+[window]
+startup_mode = "Maximized"
+decorations = "Full"
+
+[scrolling]
+history = 10000

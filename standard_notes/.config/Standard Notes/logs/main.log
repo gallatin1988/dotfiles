@@ -1,0 +1,38 @@
+[2024-08-27 03:13:22.357] [info]  Checking for update
+[2024-08-27 03:13:22.388] [info]  Generated new staging user ID: 9e277e06-83f9-52c6-a6f0-eb7a6af0d91f
+[2024-08-27 03:13:22.907] [info]  Checking for update (already in progress)
+[2024-08-27 03:13:23.681] [info]  Update for version 3.195.1 is not available (latest version: 3.194.13, downgrade is disallowed).
+[2024-08-27 03:14:59.573] [info]  PackageManager[Info]: received sync event for: Nord (1.0.0) (deleted: false), Basic Markdown (1.7.3) (deleted: false), Advanced Checklist (0.5.3) (deleted: false)
+[2024-08-27 03:14:59.575] [info]  PackageManager[Info]: Installing  Nord https://standardnotes.github.io/plugins/cdn/dist/zips/wtf.laux.theme.nord.zip
+[2024-08-27 03:14:59.575] [info]  PackageManager[Info]: Downloading from https://standardnotes.github.io/plugins/cdn/dist/zips/wtf.laux.theme.nord.zip
+[2024-08-27 03:14:59.576] [info]  PackageManager[Info]: Installing  Basic Markdown https://standardnotes.github.io/plugins/cdn/dist/zips/com.sncommunity.markdown-basic.zip
+[2024-08-27 03:14:59.576] [info]  PackageManager[Info]: Downloading from https://standardnotes.github.io/plugins/cdn/dist/zips/com.sncommunity.markdown-basic.zip
+[2024-08-27 03:14:59.576] [info]  PackageManager[Info]: Installing  Advanced Checklist https://standardnotes.github.io/plugins/cdn/dist/zips/com.sncommunity.advanced-checklist.zip
+[2024-08-27 03:14:59.577] [info]  PackageManager[Info]: Downloading from https://standardnotes.github.io/plugins/cdn/dist/zips/com.sncommunity.advanced-checklist.zip
+[2024-08-27 03:14:59.727] [info]  PackageManager[Info]: Extracting /tmp/Standard Notes/downloads/Nord.zip to /home/svs3/.config/Standard Notes/Extensions/wtf.laux.theme.nord
+[2024-08-27 03:14:59.740] [info]  PackageManager[Info]: Installed component Nord (1.0.0)
+[2024-08-27 03:14:59.815] [info]  PackageManager[Info]: Extracting /tmp/Standard Notes/downloads/Basic Markdown.zip to /home/svs3/.config/Standard Notes/Extensions/com.sncommunity.markdown-basic
+[2024-08-27 03:14:59.831] [info]  PackageManager[Info]: Installed component Basic Markdown (1.7.3)
+[2024-08-27 03:15:00.100] [info]  PackageManager[Info]: Extracting /tmp/Standard Notes/downloads/Advanced Checklist.zip to /home/svs3/.config/Standard Notes/Extensions/com.sncommunity.advanced-checklist
+[2024-08-27 03:15:00.150] [info]  PackageManager[Info]: Installed component Advanced Checklist (0.5.3)
+[2024-08-27 03:15:32.602] [info]  Checking for update
+[2024-08-27 03:15:33.323] [info]  Update for version 3.195.1 is not available (latest version: 3.194.13, downgrade is disallowed).
+[2024-08-27 03:15:33.654] [info]  Checking for update
+[2024-08-27 03:15:33.814] [info]  PackageManager[Info]: received sync event for: Advanced Checklist (0.5.3) (deleted: false), Basic Markdown (1.7.3) (deleted: false), Nord (1.0.0) (deleted: false)
+[2024-08-27 03:15:33.938] [info]  PackageManager[Info]: Checking for update for Advanced Checklist
+Latest: 0.5.3 | Installed: 0.5.3
+[2024-08-27 03:15:33.941] [info]  PackageManager[Info]: Checking for update for Basic Markdown
+Latest: 1.7.3 | Installed: 1.7.3
+[2024-08-27 03:15:33.951] [info]  PackageManager[Info]: Checking for update for Nord
+Latest: 1.0.0 | Installed: 1.0.0
+[2024-08-27 03:15:34.018] [info]  Update for version 3.195.1 is not available (latest version: 3.194.13, downgrade is disallowed).
+[2024-08-27 03:29:08.834] [info]  Checking for update
+[2024-08-27 03:29:09.863] [info]  Checking for update (already in progress)
+[2024-08-27 03:29:10.024] [info]  PackageManager[Info]: received sync event for: Advanced Checklist (0.5.3) (deleted: false), Basic Markdown (1.7.3) (deleted: false), Nord (1.0.0) (deleted: false)
+[2024-08-27 03:29:10.725] [info]  Update for version 3.195.1 is not available (latest version: 3.194.13, downgrade is disallowed).
+[2024-08-27 03:29:10.979] [info]  PackageManager[Info]: Checking for update for Advanced Checklist
+Latest: 0.5.3 | Installed: 0.5.3
+[2024-08-27 03:29:10.981] [info]  PackageManager[Info]: Checking for update for Basic Markdown
+Latest: 1.7.3 | Installed: 1.7.3
+[2024-08-27 03:29:10.987] [info]  PackageManager[Info]: Checking for update for Nord
+Latest: 1.0.0 | Installed: 1.0.0

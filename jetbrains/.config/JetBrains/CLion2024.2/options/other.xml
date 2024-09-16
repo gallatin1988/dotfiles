@@ -1,0 +1,53 @@
+<application>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="LangManager">
+    <option name="languageName" value="ObjectiveC" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Noto Sans" />
+    <option name="fontSize" value="12.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "Rad.Init.Cfg.1": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.cidr.test.framework.showIndexingAsTask": "true",
+    "RunOnceActivity.cidr.test.roots.only": "true",
+    "RunOnceActivity.llm.installer.activate.toolwindow": "true",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "clion.initialConfigPerformed": "true",
+    "evlsprt3.242": "7",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "242.21829.173",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "12.0",
+    "gotit.previous.run": "CL-242.21829.173",
+    "ide.memory.adjusted": "true",
+    "input.method.disabler.muted": "true",
+    "last_opened_file_path": "/home/svs3/dev/cpp/ppp_3ed/chap2/try_this",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Material Palenight",
+    "registry.to.advanced.settings.migration.build": "CL-242.21829.173",
+    "ts.lib.d.ts.version": "5.4.3"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/svs3/dev/cpp/ppp_3ed/chap2/try_this"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "com.jetbrains.rider.cpp.fileType.CppHeaderFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

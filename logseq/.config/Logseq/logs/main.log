@@ -1,0 +1,15 @@
+[2024-08-28 02:41:30.126] [info] Logseq App(0.10.9) Starting... 
+[2024-08-28 02:41:30.137] [info] restore proxy settings {:type "system"}
+[2024-08-28 02:41:30.137] [info] set proxy to {:type "system"}
+[2024-08-28 02:41:31.874] [debug] :electron.handler/watch-dir {:path "/home/svs3/.logseq/config"}
+[2024-08-28 02:44:34.335] [info] :electron.handler/open-dir open folder selection dialog
+[2024-08-28 02:45:14.216] [debug] :electron.handler/open-dir {:path "/home/svs3/logseq/personal"}
+[2024-08-28 02:45:14.291] [debug] :electron.handler/watch-dir {:path "/home/svs3/logseq/personal"}
+[2024-08-28 02:45:21.107] [debug] window-all-closed Quitting...
+[2024-08-29 11:58:29.649] [info] Logseq App(0.10.9) Starting... 
+[2024-08-29 11:58:29.662] [info] restore proxy settings {:type "system"}
+[2024-08-29 11:58:29.663] [info] set proxy to {:type "system"}
+[2024-08-29 11:58:31.170] [debug] :electron.handler/watch-dir {:path "/home/svs3/.logseq/config"}
+[2024-08-29 11:58:31.187] [debug] :electron.handler/unwatch-dir {:path "/home/svs3/logseq/personal"}
+[2024-08-29 11:58:31.188] [debug] :electron.handler/watch-dir {:path "/home/svs3/logseq/personal"}
+[2024-08-29 11:58:47.188] [debug] window-all-closed Quitting...
