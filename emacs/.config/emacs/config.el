@@ -37,20 +37,13 @@
 (add-hook 'after-init-hook #'elpaca-process-queues)
 (elpaca `(,@elpaca-order))
 
-;; Install use-package support
+;; Install use-package support and :ensure packages by default
 (elpaca elpaca-use-package
-  ;; Enable use-package :ensure support for Elpaca.
   (elpaca-use-package-mode))
-
-;;When installing a package used in the init file itself,
-;;e.g. a package which adds a use-package key word,
-;;use the :wait recipe keyword to block until that package is installed/configured.
-;;For example:
-;;(use-package general :ensure (:wait t) :demand t)
+(setq use-package-always-ensure t)
 
 ;; Expands to: (elpaca evil (use-package evil :demand t))
 (use-package evil
-:ensure t
 :init
     (setq evil-want-integration t)
     (setq evil-want-keybinding nil)
@@ -58,13 +51,11 @@
     (setq evil-split-window-below t)
     (evil-mode))
 (use-package evil-collection
-:ensure t
 :after evil
 :config
     (setq evil-collection-mode-list '(dashboard dired ibuffer))
     (evil-collection-init))
-(use-package evil-tutor
-:ensure t)
+(use-package evil-tutor)
 
 ;;Turns off elpaca-use-package-mode current declaration
 ;;Note this will cause evaluate the declaration immediately. It is not deferred.
@@ -117,6 +108,23 @@
 
 )
 
+(save-place-mode 1) ;;Rmemebers your place in a file
+(fset 'yes-or-no-p 'y-or-n-p) ;; Replaces yes/no with y/n 
+
+;;Save what you enter into minibuffer prompt
+(setq history-length 50)
+(savehist-mode 1)
+
+;;Move customizations variables to seperate file and load it
+(setq custom-file (locate-user-emacs-file "custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
+
+(setq use-dialog-box nil) ;;Supresses pop-up UI dialog boxes when prompting
+(global-auto-revert-mode 1) ;;Revert buffers when underlying file has changed
+(recentf-mode 1) ;;Recalls most recently deleted files
+(pixel-scroll-precision-mode 1) ;;Enables smooth scrollilng
+(setq custom-safe-themes t)
+
 (use-package all-the-icons
 :ensure t
 :if (display-graphic-p))
@@ -124,6 +132,14 @@
 (use-package all-the-icons-dired
 :ensure t
 :hook (dired-mode . (lambda () (all-the-icons-dired-mode 1))))
+
+(use-package xclip
+:ensure t
+:config
+(setq xclip-program "wl-copy")
+(setq xclip-select-enable-clipboard t)
+(setq xclip-mode t)
+(setq xclip-method (quote wl-copy)))
 
 (set-face-attribute 'default nil
     :font "JetBrains Mono"
@@ -148,6 +164,13 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(set-fringe-mode 10)
+
+(setq inhibit-splash-screen t
+      use-file-dialog nil
+      tab-bar-new-button-show nil
+      tab-bar-close-button-show nil
+      tab-line-closebutton-show nil)
 
 (global-display-line-numbers-mode t)
 (global-visual-line-mode t)
@@ -166,9 +189,6 @@
 
 (require 'org-tempo)
 
-(use-package catppuccin-theme :ensure t :demand t)
-(load-theme 'catppuccin t)
-
 (use-package rainbow-mode
 :ensure t
 :hook
@@ -180,6 +200,15 @@
     (svs/leader-keys
         "fu" '(sudo-edit-find-file :wk "Sudo find file")
         "fU" '(sudo-edit :wk "Sudo edit file")))
+
+(use-package modus-themes
+:init
+  (setq modus-themes-mode-line '(borderless))
+:config
+  (load-theme 'modus-vivendi :no-confirm))
+          ;;(use-package catppuccin-theme)
+          ;;(load-theme 'catppuccin t)
+          ;;(catppuccin-reload)
 
 (use-package which-key
 :ensure t
