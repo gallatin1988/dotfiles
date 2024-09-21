@@ -124,6 +124,11 @@
 (recentf-mode 1) ;;Recalls most recently deleted files
 (pixel-scroll-precision-mode 1) ;;Enables smooth scrollilng
 (setq custom-safe-themes t)
+(push '(fullscreen . maximized) default-frame-alist) ;; Forces Emacs to start in fullscreen
+(setq scroll-preserve-screen-postition 1)
+(set-language-environment "UTF-8")
+(setq-default indent-tabs-mode nil)
+(setq sentence-end-double-space nil)
 
 (use-package all-the-icons
 :ensure t
@@ -167,6 +172,9 @@
 (set-fringe-mode 10)
 
 (setq inhibit-splash-screen t
+      ;;inhibit-startup-message t
+      ;;inhibit-startup-screen t
+      initial-scratch-message nil 
       use-file-dialog nil
       tab-bar-new-button-show nil
       tab-bar-close-button-show nil
@@ -174,6 +182,7 @@
 
 (global-display-line-numbers-mode t)
 (global-visual-line-mode t)
+(column-number-mode t)
 
 (use-package toc-org
 :ensure t
