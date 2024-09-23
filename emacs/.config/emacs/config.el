@@ -63,7 +63,6 @@
 (use-package emacs :ensure nil :config (setq ring-bell-function #'ignore))
 
 (use-package general
-:ensure t
 :config
     (general-evil-setup)
     ;; set up 'SPC' as global leader key
@@ -105,6 +104,25 @@
        "t" '(:ignore t :wk "Toggle")
        "tl" '(display-line-numbers-mode :wk "Toggle line numbers")
        "tt" '(visual-line mode :wk "Toggle truncated lines"))
+    
+    (svs/leader-keys
+       "w" '(:ignore t :wk "Windows")
+       ;; Window splits
+       "wc" '(evil-window-delete :wk "Close window")
+       "wn" '(evil-window-new :wk "New window")
+       "ws" '(evil-window-split :wk "Horizontal split window")
+       "wv" '(evil-window-vsplit :wk "Vertical split window")
+       ;; Window motions
+       "wh" '(evil-window-left :wk "Window left")
+       "wj" '(evil-window-down :wk "Window down")
+       "wk" '(evil-window-up :wk "Window up")
+       "wl" '(evil-window-right :wk "Window right")
+       "ww" '(evil-window-next :wk "Goto next window")
+       ;; Move Windows
+       "wH" '(buf-move-left :wk "Buffer move left")
+       "wJ" '(buf-move-down :wk "Buffer move down")
+       "wK" '(buf-move-up :wk "Buffer move up")
+       "wL" '(buf-move-right :wk "Buffer move right"))
 
 )
 
@@ -131,20 +149,86 @@
 (setq sentence-end-double-space nil)
 
 (use-package all-the-icons
-:ensure t
 :if (display-graphic-p))
 
 (use-package all-the-icons-dired
-:ensure t
 :hook (dired-mode . (lambda () (all-the-icons-dired-mode 1))))
 
 (use-package xclip
-:ensure t
 :config
 (setq xclip-program "wl-copy")
 (setq xclip-select-enable-clipboard t)
 (setq xclip-mode t)
 (setq xclip-method (quote wl-copy)))
+
+(require 'windmove)
+
+;;;###autoload
+(defun buf-move-up ()
+"Swap the current buffer and the buffer above the split.
+If there is no split, ie now window above the current one, an
+error is signaled."
+   ;; "Switches between the current buffer, and the buffer above the
+   ;; split, if possible."
+   (interactive)
+   (let* ((other-win (windmove-find-other-window 'up))
+         (buf-this-buf (window-buffer (selected-window))))
+      (if (null other-win)
+          (error "No window above this one")
+        ;; swap top with this one
+        (set-window-buffer (selected-window) (window-buffer other-win))
+        ;; move this one to top
+        (set-window-buffer other-win buf-this-buf)
+        (select-window other-win))))
+
+;;;###autoload
+(defun buf-move-down ()
+"Swap the current buffer and the buffer under the split.
+If there is no split, ie now window under the current one, an
+error is signaled."
+  (interactive)
+  (let* ((other-win (windmove-find-other-window 'down))
+	 (buf-this-buf (window-buffer (selected-window))))
+    (if (or (null other-win) 
+            (string-match "^ \\*Minibuf" (buffer-name (window-buffer other-win))))
+        (error "No window under this one")
+      ;; swap top with this one
+      (set-window-buffer (selected-window) (window-buffer other-win))
+      ;; move this one to top
+      (set-window-buffer other-win buf-this-buf)
+      (select-window other-win))))
+
+;;;###autoload
+(defun buf-move-left ()
+"Swap the current buffer and the buffer on the left of the split.
+If there is no split, ie now window on the left of the current
+one, an error is signaled."
+  (interactive)
+  (let* ((other-win (windmove-find-other-window 'left))
+	 (buf-this-buf (window-buffer (selected-window))))
+    (if (null other-win)
+        (error "No left split")
+      ;; swap top with this one
+      (set-window-buffer (selected-window) (window-buffer other-win))
+      ;; move this one to top
+      (set-window-buffer other-win buf-this-buf)
+      (select-window other-win))))
+
+;;;###autoload
+(defun buf-move-right ()
+"Swap the current buffer and the buffer on the right of the split.
+If there is no split, ie now window on the right of the current
+one, an error is signaled."
+  (interactive)
+  (let* ((other-win (windmove-find-other-window 'right))
+	 (buf-this-buf (window-buffer (selected-window))))
+    (if (null other-win)
+        (error "No right split")
+      ;; swap top with this one
+      (set-window-buffer (selected-window) (window-buffer other-win))
+      ;; move this one to top
+      (set-window-buffer other-win buf-this-buf)
+      (select-window other-win))))
 
 (set-face-attribute 'default nil
     :font "JetBrains Mono"
@@ -184,14 +268,53 @@
 (global-visual-line-mode t)
 (column-number-mode t)
 
+(use-package vertico
+  :config
+  (setq vertico-cycle t)
+  (setq vertico-resize nil)
+  (vertico-mode 1))
+
+(use-package marginalia
+  :config
+  (marginalia-mode 1))
+
+(use-package orderless
+  :config
+  (setq completion-styles '(orderless basic)))
+
+(use-package consult
+  :bind (;; A recursive grep
+         ("M-s M-g" . consult-grep)
+         ;; Search for files names recursively
+         ("M-s M-f" . consult-find)
+         ;; Search through the outline (headings) of the file
+         ("M-s M-o" . consult-outline)
+         ;; Search the current buffer
+         ("M-s M-l" . consult-line)
+         ;; Switch to another buffer, or bookmarked file, or recently
+         ;; opened file.
+         ("M-s M-b" . consult-buffer)))
+
+(use-package embark
+  :bind (("C-." . embark-act)
+         :map minibuffer-local-map
+         ("C-c C-c" . embark-collect)
+         ("C-c C-e" . embark-export)))
+
+(use-package embark-consult)
+
+(use-package wgrep
+  :bind ( :map grep-mode-map
+          ("e" . wgrep-change-to-wgrep-mode)
+          ("C-x C-q" . wgrep-change-to-wgrep-mode)
+          ("C-c C-c" . wgrep-finish-edit)))
+
 (use-package toc-org
-:ensure t
 :commands toc-org-enable
 :init (add-hook 'org-mode-hook 'toc-org-enable))
 
 (add-hook 'org-mode-hook 'org-indent-mode)
 (use-package org-bullets
-:ensure t)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (electric-indent-mode -1)
@@ -199,12 +322,10 @@
 (require 'org-tempo)
 
 (use-package rainbow-mode
-:ensure t
 :hook
 ((org-mode prog-mode) . rainbow-mode))
 
 (use-package sudo-edit
-:ensure t
 :config
     (svs/leader-keys
         "fu" '(sudo-edit-find-file :wk "Sudo find file")
@@ -234,7 +355,6 @@
 ;;(catppuccin-reload)
 
 (use-package which-key
-:ensure t
 :init
     (which-key-mode 1)
 :config
